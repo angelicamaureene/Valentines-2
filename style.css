@@ -1,102 +1,141 @@
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+}
+
+/* ===== PAGE BACKGROUND ===== */
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #fff5f5;
+
+    background-color: #fff3f3;
     font-family: 'Indie Flower', cursive;
+
     overflow: hidden;
 }
 
+/* ===== MAIN CARD ===== */
 .container {
+    background-color: #ffe9ec;
     text-align: center;
-    background-color: #ffebee;
-    padding: 40px;
-    border-radius: 20px;
-    border: 3px solid #ffea70;
-    box-shadow: 0 8px 20px rgba(255, 107, 129, 0.3);
-    max-width: 400px;
+
+    padding: 50px 40px;
     width: 90%;
+    max-width: 420px;
+
+    border-radius: 30px;
+    border: 4px solid #ffe066;
+
+    box-shadow:
+        0 10px 25px rgba(255, 180, 190, 0.4),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
+/* ===== HEADER TEXT ===== */
 .header_text {
-    font-size: 36px;
-    color: #ffea70;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(255, 107, 129, 0.2);
+    font-size: 34px;
+    margin-bottom: 30px;
+
+    color: #ffd84d;
+    text-shadow:
+        2px 2px 0 #ffb3c1,
+        4px 4px 8px rgba(255, 140, 160, 0.35);
+}
+
+/* ===== IMAGE ===== */
+.gif_container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
 }
 
 .gif_container img {
-    max-width: 100%;
+    width: 180px;
     height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
 }
 
+/* ===== BUTTON ROW ===== */
 .buttons {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 18px;
 }
 
+/* ===== BUTTON BASE ===== */
 .btn {
-    padding: 12px 24px;
-    font-size: 20px;
-    border: 2px solid #ff6b81;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background-color: #ff6b81;
-    color: white;
     font-family: 'Indie Flower', cursive;
-    box-shadow: 0 4px 10px rgba(255, 107, 129, 0.3);
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    font-size: 20px;
+
+    padding: 12px 26px;
+    border-radius: 16px;
+
+    border: none;
+    cursor: pointer;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    box-shadow: 0 6px 15px rgba(255, 150, 170, 0.35);
 }
 
-.btn:hover {
-    background-color: white;
-    color: #ff6b81;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(255, 107, 129, 0.4);
+/* ===== YES BUTTON ===== */
+#yesButton {
+    background-color: #ff7a90;
+    color: white;
 }
 
+#yesButton:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 22px rgba(255, 120, 145, 0.5);
+}
+
+/* ===== NO BUTTON ===== */
 #noButton {
-    background-color: #ff4757;
-    border-color: #ff4757;
+    background-color: #ff4d6d;
+    color: white;
 }
 
 #noButton:hover {
-    background-color: white;
-    color: #ff4757;
+    transform: scale(0.95);
 }
 
+/* ===== WIGGLE ANIMATION ===== */
 @keyframes wiggle {
     0% { transform: rotate(0deg); }
-    25% { transform: rotate(-5deg); }
-    50% { transform: rotate(5deg); }
-    75% { transform: rotate(-5deg); }
+    25% { transform: rotate(-6deg); }
+    50% { transform: rotate(6deg); }
+    75% { transform: rotate(-6deg); }
     100% { transform: rotate(0deg); }
 }
 
 .wiggle {
-    animation: wiggle 0.5s ease-in-out;
+    animation: wiggle 0.4s ease-in-out;
 }
 
+/* ===== OPTIONAL HEART EFFECT ===== */
 @keyframes heartFade {
-    0% { opacity: 1; transform: scale(1); }
-    100% { opacity: 0; transform: scale(1.5); }
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.6);
+    }
 }
 
 .heart {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: transparent;
-    transform: translate(-50%, -50%);
-    animation: heartFade 1s ease-out forwards;
+
     background-color: #ff6b81;
     border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+    animation: heartFade 1s ease-out forwards;
 }

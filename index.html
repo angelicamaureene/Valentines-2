@@ -1,22 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Will you be my Valentine?</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
     <div class="container">
         <h1 class="header_text">Will you be my Valentine?</h1>
+
         <div class="gif_container">
-            <img src="https://media.tenor.com/nBQQ6XM5BhIAAAAj/cute.gif" alt="Cute Cat GIF">
+            <img
+                src="https://media.tenor.com/nBQQ6XM5BhIAAAAj/cute.gif"
+                alt="Cute kitty asking to be your Valentine"
+            >
         </div>
+
         <div class="buttons">
-            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
-            <button class="btn" id="noButton" onclick="shrinkNoGrowYes()">No</button>
+            <button
+                class="btn"
+                id="yesButton"
+                onclick="nextPage()"
+            >
+                Yes
+            </button>
+
+            <button
+                class="btn"
+                id="noButton"
+                onclick="shrinkNoGrowYes()"
+            >
+                No
+            </button>
         </div>
     </div>
 
-    <script src="script.js"></script> 
+    <!-- Script -->
+    <script src="./script.js"></script>
 </body>
 </html>

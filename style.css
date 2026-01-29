@@ -53,6 +53,7 @@ body {
     color: white;
     font-family: 'Indie Flower', cursive;
     box-shadow: 0 4px 10px rgba(255, 107, 129, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn:hover {
